@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Medical Insurance Cost Predictor </title>
+<style>
+
+*{font-size:25px;font-family:Courier;}
+body{background-color : skyblue;}
+html {
+    display: table;
+    margin: auto;
+}
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+input[type=submit] { 
+    background:yellow;border-radius: 20px; 
+} 
+</style>
+</head>
+
+<body>
+
+<h1><center>Medical Insurance Cost Predictor<center></h1>
+<form method ="POST">
+Beneficiary's Age : <input type ="number" name="age" >
+</br></br>
+Select your Sex : <input type="radio" name="sex" value="male" checked=true/> Male </input>
+<input type="radio" name="sex" value="female" /> Female </input>
+</br></br>
+Enter your BMI : <input type ="number" name="bmi" step="any" >
+</br></br>
+Select Number of children : 
+<select name = "children">
+<option value ="0" >0</option>
+<option value ="1" >1</option>
+<option value ="2" >2</option>
+<option value ="3" >3</option>
+</select>
+</br></br>
+Are you a smoker ? : <input type="radio" name="smoker" value="yes" /> Yes </input>
+<input type="radio" name="smoker" value="no" checked=true /> No </input>
+</br></br>
+Select Region of Residence
+<select name = "region">
+<option value ="northeast" >Northeast[US]</option>
+<option value ="northwest" >Northwest[US]</option>
+<option value ="southeast" >Southeast[US]</option>
+<option value ="southwest" >Southwest[US]</option>
+</select>
+</br></br>
+
+<center><input type ="submit" value = "Find Yearly Premium Charges" name ="submit1" /><center></br>
+<center><input type ="submit" value = "Logout" name ="submit2" /><center></br>
+</form>
+<center><b>{{ msg }}</b></center>
+
+</body>
+</html>
